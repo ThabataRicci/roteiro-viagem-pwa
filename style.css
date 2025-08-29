@@ -1,0 +1,357 @@
+/* FONTE MONTSERRAT E ICONES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* CONFIGURACAO GERAL DAS PAGINAS */
+body {
+  font-family: 'Montserrat', sans-serif; 
+  background-color: #f9f9f9; 
+  color: #000000; 
+  margin: 0; 
+  padding: 0;
+  font-size: 13px; 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+/* CABECALHO */
+header {
+  position: sticky;
+  z-index: 1000;
+  top: 0; 
+  background-color: #003366;
+  color: white;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 12px 15px; 
+}
+
+/* LINK DO CABECALHO */
+.header-titulo a {
+  color: white;
+  text-decoration: none;
+}
+
+/* TITULO CABECALHO */
+.header-titulo {
+  font-size: 20px; 
+  font-weight: bold; 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+/* BOTOES DO CABECALHO (MENU E GERAL) */
+.header-botao {
+  color: white; 
+  border-radius: 10px; 
+  width: 40px; 
+  height: 40px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-decoration: none; 
+}
+.header-botao:hover {
+  background-color: #081e34;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: 260px; 
+  background-color: #003366;
+  z-index: 2000; 
+  padding-top: 60px; 
+  transform: translateX(-100%); 
+  transition: transform 0.4s ease-in-out; 
+}
+.menu-lateral.aberto {
+  transform: translateX(0); 
+}
+
+/* LINKS DENTRO DO MENU LATERAL */
+.menu-lateral a {
+  display: flex;
+  flex-direction: column; 
+  padding: 12px 25px; 
+  text-decoration: none; 
+  border-bottom: 1px solid #002244; 
+  transition: background-color 0.2s ease; 
+}
+.menu-lateral a:hover {
+  background-color: #081e34;
+}
+
+/* TEXTOS NO MENU LATERAL */
+.menu-dia-numero {
+  color: white; 
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-bottom: 2px; 
+}
+.menu-dia-data {
+  color: rgba(220, 220, 220, 0.6); 
+  font-size: 13.5px; 
+}
+
+/* BOTAO DE FECHAR O MENU */
+#botao-fechar-menu {
+  position: absolute; 
+  top: 10px; 
+  right: 20px; 
+  font-size: 35px; 
+  color: white; 
+  border: none; 
+  padding: 0; 
+}
+#botao-fechar-menu:hover {
+    background-color: transparent; 
+}
+
+/* FUNDO QUANDO O MENU ABRIR */
+#overlay {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1500; 
+  display: none; 
+}
+#overlay.aberto {
+  display: block; 
+  opacity: 1; 
+}
+
+/* CONTEUDO DO SITE */
+main {
+  max-width: 900px; 
+  margin: 25px auto; 
+  padding: 0 20px 40px 20px; 
+  flex: 1; 
+}
+
+/* TITULOS DA PAGINA (H2) */
+h2 {
+  color: #003366; 
+  font-weight: bold;
+  padding-bottom: 0; 
+  margin: 0; 
+  font-size: 27px; 
+  flex: 1;
+}
+
+/* TITULOS */
+.titulo-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-bottom: 3px solid #003366;
+  padding-bottom: 10px; 
+  margin-bottom: 40px; 
+}
+
+/* SEQUENCIA DO DIA */
+.timeline {
+  margin-bottom: 60px; 
+  position: relative; 
+}
+.timeline ul {
+  list-style: none; 
+  padding: 0; 
+  position: relative; 
+}
+.timeline li {
+  padding: 5px 0; 
+  border-left: 3px solid #aaa; 
+  margin-left: 20px; 
+  padding-left: 10px; 
+  position: relative; 
+  margin-bottom: 0px; 
+  margin-top: 0px; 
+  font-weight: bold; 
+}
+.timeline li::before {
+  content: ""; 
+  position: absolute;
+  left: -6px; 
+  top: 10px; 
+  width: 10px; 
+  height: 10px;
+  background: #aaa; 
+  border-radius: 50%;
+}
+.timeline p {
+  font-size: 14px; 
+  border-left: 3px solid #d1d0d0; 
+  padding: 5px 0; 
+  margin-left: 20px; 
+  padding-left: 10px; 
+  position: relative; 
+  margin-bottom: 0px; 
+  margin-top: 0px; 
+}
+
+/* CARDS */
+.card-section {
+  margin-bottom: 60px; 
+}
+.card {
+  background-color: white;
+  border-radius: 10px; 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12); 
+  padding: 10px 15px; 
+  display: flex; 
+  gap: 15px;
+  margin-bottom: 20px; 
+  align-items: center; 
+  cursor: pointer; 
+}
+.card:hover {
+  transform: scale(1.02); 
+  border-radius: 10px; 
+}
+
+/* IMAGENS DOS CARDS */
+.card-photo img {
+  background-color: white; 
+  width: 100%; 
+  max-width: 300px;
+  height: 100%; 
+  border-radius: 8px; 
+  display: block; 
+  user-select: none; 
+  margin: 0; 
+  padding: 0; 
+}
+.card-photo {
+  flex-shrink: 0; 
+  width: 200px; 
+  margin: 0;
+  padding: 0; 
+  border-right: 2px solid #ccc; 
+  padding-right: 15px; 
+}
+
+/* INFORMACOES DO CARD */
+.card-info h4 {
+  margin: 0 0 15px 0;
+  color: #003366;
+  font-size: 18px;
+  padding-bottom: 1px;
+}
+.card-info p {
+  margin: 8px 0;
+  font-size: 14px; 
+  line-height: 1.3; 
+}
+.card-info a {
+  color: #0068b3; 
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+/* TITULOS ACIMA DOS CARDS */
+.titulo-secao {
+  color: #003366; 
+  font-size: 23px;
+  font-weight: bold;
+  padding-bottom: 8px; 
+  margin-top: 40px;
+  margin-bottom: 20px; 
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* SETAS PRA PASSAR PAGINAS */
+.navegacao-inferior {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 15px; 
+  margin-top: 60px; 
+  border-top: 1px solid #e0e0e0; 
+  padding-top: 15px; 
+}
+.botao-nav-inferior {
+  display: inline-block; 
+  background-color: transparent; 
+  border: none; 
+  color: #003366; 
+  text-decoration: none;
+  padding: 10px; 
+  border-radius: 50%; 
+}
+.botao-nav-inferior .seta {
+  font-size: 39px;
+  line-height: 1; 
+  display: block; 
+}
+.botao-nav-inferior .texto {
+  display: none; 
+}
+.botao-nav-inferior-vazio {
+  display: inline-block;
+  background-color: transparent;
+  border: none; 
+  color: #f9f9f9; 
+  text-decoration: none; 
+  padding: 10px;
+  border-radius: 50%; 
+}
+
+
+
+/* RODAPE */
+footer {
+  text-align: center; 
+  padding: 20px 0; 
+  background-color: #003366; 
+  color: white; 
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-top: 50px; 
+}
+
+/* --- ESTILOS PARA CELULAR --- */
+@media (max-width: 600px) {
+  main {
+    padding: 0 10px 30px 10px; 
+    margin: 15px auto; 
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .card-section .titulo-secao {
+    font-size: 17px;
+  }
+  .header-titulo {
+    font-size: 16px; 
+  }
+  .card-photo {
+    width: 100% !important; 
+    border-right: none; 
+    border-bottom: 2px solid #ccc; 
+    padding: 0 0 10px 0;
+    margin-bottom: 0; 
+  }
+  .card-photo img {
+    height: auto; 
+  }
+  .card {
+    flex-direction: column; 
+    align-items: normal;
+  }
+  .card-info {
+    padding-left: 0; 
+    width: 100%; 
+    margin-top: 10px;
+  }
+}

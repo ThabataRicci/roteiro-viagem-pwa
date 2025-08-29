@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#003366" />
+    <link rel="apple-touch-icon" href="/icone180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+
+
+    <!-- NOME DO SITE (ABA) -->
+    <title>22/07 - Terça</title>
+  </head>
+
+
+
+  <!-- MENU LATERAL -->
+  <body>
+    <nav id="menu-lateral" class="menu-lateral">
+      <a href="#" id="botao-fechar-menu">×</a>
+    </nav>
+    <div id="overlay"></div>
+
+
+
+<!-- CABECALHO -->
+    <header>
+      <a href="#" class="header-botao" id="botao-abrir-menu">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <h1 class="header-titulo">
+        <a href="index.html">Buenos Aires 2025 ✈️</a>
+      </h1>
+      <a href="todos.html" class="header-botao">
+        <i class="fa-solid fa-table-cells"></i>
+      </a>
+    </header>
+
+
+
+<!-- TITULO -->
+    <main>
+      <div class="titulo-container">
+        <h2>Dia 4 - Terça</h2>
+      </div>
+    
+
+      
+      <!-- SEQUENCIA DO DIA -->
+      <section class="timeline">
+        <h3 class="titulo-secao">Sequência do Dia</h3>
+        <ul>
+          <li>Airbnb</li>
+          <p>🚌 24 minutos</p>
+          <li>Centro Cultural de Recoleta</li>
+          <p>🚶 12 minutos</p>
+          <li>Floralis Generica</li>
+          <p>🚶 27 minutos</p>
+          <li>Jardim Japonês</li>
+          <p>🚶 7 minutos</p>
+          <li>Planetário Galileo Galilei</li>
+          <p>🚶 18 minutos</p>
+          <li>Arcos del Rosedal</li>
+          <p>🚶 23 minutos</p>
+          <li>Eco Parque</li>
+          <p>🚶 7 minutos</p>
+          <li>Jardim Botânico</li>
+          <p>🚌 6 minutos</p>
+          <li>Palermo Hollywood</li>
+          <p>🚶 21 minutos</p>
+          <li>El Purgatório</li>
+          <p>🚶 15 minutos</p>
+          <li>Airbnb</li>
+        </ul>
+      </section>
+
+
+
+      <!-- ATRACOES -->
+      <section class="card-section">
+        <h3 class="titulo-secao">Atrações</h3>
+        <div id="cards-dia-4"></div>
+      </section>
+
+
+      <!-- SETAS INFERIORES -->
+      <nav class="navegacao-inferior">
+        <a href="dia3.html" class="botao-nav-inferior">
+          <span class="seta">‹</span>
+          <span class="texto">Dia Anterior</span>
+        </a>
+        <a class="botao-nav-inferior-vazio"></a>
+      </nav>
+    </main>
+
+
+    <!-- RODAPE -->
+    <footer>
+      <p>🇦🇷</p>
+    </footer>
+
+
+
+<!-- SERVICE WORKER -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+    
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+
+    
+  </body>
+</html>
